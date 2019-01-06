@@ -1,0 +1,15 @@
+{
+	"ImportPath": "public/public-golang-websockets-app",
+	"GoVersion": "go1.11",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/websocket",
+			"Comment": "v1.4.0-6-g95ba29e",
+			"Rev": "95ba29eb981bbb27d92e1f70bf8a1949452d926b"
+		}
+	]
+}

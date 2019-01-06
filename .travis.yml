@@ -1,0 +1,15 @@
+language: go
+go:
+- 1.11.x
+go_import_path: "$HOME/go/src/public/public-golang-websockets-app"
+deploy:
+  provider: heroku
+  app: public-go-websockets-prod
+  on:
+    condition: "$TRAVIS_GO_VERSION =~ ^1\\.11"
+    repo: ncmd/public-golang-websockets-app
+    branch: master
+  api_key:
+    secure: arzga/Ad0hLKFw4yH5+6Tl0ZvOYyNCFUNHiT95EKoppPwbjpsB6Awz6K9Nz0LfI1ZlHrz80AUljG6HQLIsW5eI1NaxRfY+75JtGsiOvh0dKo1orYKQnzPMDwkxlySO88r+sUfpENbHd+CnmvGELgCZwCNEU+OHQjXoq0Y6Fc3elNHU2WeNA2oQkY3YGHTna6SW6nYT81MSMJ26Gbc2EJvk7+Fv0sl2LK1+GAhDV/+ln3Q/06XHKKBp4mjCat24Ytc9EifTpkl+g5MpU4whQ1ivsb0b96QMLCPycEYc+8WGBI5Wy7HMqRp+W5NzMjGPrPEL54McYUAdo6pFlGCDlpr/xfT0Ra+NnMGRyN8CDJCR76uL4vGBTQC585RW2XrMgVM1R/OMimoSdEkezCqzhr8i+3mNNTYohdPFgFKEA0urmihjKI5MEaj992GT7np1B5sD/LHQ/+FMYxhiYIdYXPHUoJc+bk2Z0YUYM9jsS3Tbf7XL0YxCYsBeba4xA1B9AOkh12d99k8gv1TVTz68uX8E+TBHqW3SvWwvnvu+P2FQp4ygcdZfkKAmpX7ligllDe//KMWuCzb1QhDCRez4U77rxlXKQKVk452Pb1L5yiud3g6Z9hHbZwvQZj0xKv/Wwtci5GzPdMDFzCaRf4ELEaKAJq2ACi+WAnyLQMxv/5K9E=
+env:
+  APP_ENV: prod
