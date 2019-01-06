@@ -1,1 +1,1 @@
-web: nervdaq-golang-websockets-app
+web: public-golang-websockets-app
