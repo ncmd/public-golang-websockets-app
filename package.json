@@ -1,0 +1,20 @@
+{
+  "name": "public-golang-websockets-app",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.com/ncmd/nervdaq-golang-websockets-app.svg?token=yDgzEp78NY59NKQDq1hd&branch=master)](https://travis-ci.com/ncmd/nervdaq-golang-websockets-app)",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git add . && git commit -m \"Deploy\" && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncmd/public-golang-websockets-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncmd/public-golang-websockets-app/issues"
+  },
+  "homepage": "https://github.com/ncmd/public-golang-websockets-app#readme"
+}

@@ -1,5 +1,6 @@
 # public-golang-websockets-app
 [![Build Status](https://travis-ci.com/ncmd/nervdaq-golang-websockets-app.svg?token=yDgzEp78NY59NKQDq1hd&branch=master)](https://travis-ci.com/ncmd/nervdaq-golang-websockets-app)
+
 - follow instructions: 
 - https://docs.travis-ci.com/user/languages/go/
 - https://docs.travis-ci.com/user/deployment/heroku/
