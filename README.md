@@ -1,5 +1,5 @@
 # public-golang-websockets-app
-[![Build Status](https://travis-ci.com/ncmd/nervdaq-golang-websockets-app.svg?token=yDgzEp78NY59NKQDq1hd&branch=master)](https://travis-ci.com/ncmd/nervdaq-golang-websockets-app)
+[![Build Status](https://travis-ci.com/ncmd/nervdaq-golang-websockets-app.svg?token=yDgzEp78NY59NKQDq1hd&branch=master)](https://travis-ci.com/ncmd/nervdaq-golang-websockets-app) [![Greenkeeper badge](https://badges.greenkeeper.io/ncmd/public-golang-websockets-app.svg)](https://greenkeeper.io/)
 
 - follow instructions: 
 - https://docs.travis-ci.com/user/languages/go/
