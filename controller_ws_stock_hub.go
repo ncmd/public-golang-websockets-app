@@ -6,30 +6,30 @@ package main
 
 // Hub maintains the set of active clients and broadcasts messages to the
 // clients.
-type Hub struct {
+type HubStock struct {
 	// Registered clients.
-	clients map[*Client]bool
+	clients map[*ClientStock]bool
 
 	// Inbound messages from the clients.
 	broadcast chan []byte
 
 	// Register requests from the clients.
-	register chan *Client
+	register chan *ClientStock
 
 	// Unregister requests from clients.
-	unregister chan *Client
+	unregister chan *ClientStock
 }
 
-func newHub() *Hub {
-	return &Hub{
+func newHubStock() *HubStock {
+	return &HubStock{
 		broadcast:  make(chan []byte),
-		register:   make(chan *Client),
-		unregister: make(chan *Client),
-		clients:    make(map[*Client]bool),
+		register:   make(chan *ClientStock),
+		unregister: make(chan *ClientStock),
+		clients:    make(map[*ClientStock]bool),
 	}
 }
 
-func (h *Hub) run() {
+func (h *HubStock) run() {
 	for {
 		select {
 		case client := <-h.register:

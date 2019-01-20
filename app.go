@@ -45,17 +45,24 @@ func main() {
 				fmt.Println("Using Local Environment")
 				homefile = "home_local.html"
 			} else {
-				homefile = "home.html"
+				homefile = "home_prod.html"
 			}
 		}
 	}
 
-	flag.Parse()
-	hub := newHub()
-	go hub.run()
 	http.HandleFunc("/", serveHome)
-	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
-		serveWs(hub, w, r)
+
+	flag.Parse()
+	hubChat := newHubChat()
+	go hubChat.run()
+	http.HandleFunc("/wschat", func(w http.ResponseWriter, r *http.Request) {
+		serveWsChat(hubChat, w, r)
+	})
+
+	hubStock := newHubStock()
+	go hubStock.run()
+	http.HandleFunc("/wsstock", func(w http.ResponseWriter, r *http.Request) {
+		serveWsStock(hubStock, w, r)
 	})
 
 	port := os.Getenv("PORT")

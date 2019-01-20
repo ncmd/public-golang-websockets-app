@@ -2,6 +2,7 @@ language: go
 go:
 - 1.11.x
 go_import_path: "$HOME/go/src/public/public-golang-websockets-app"
+
 deploy:
   provider: heroku
   app: public-go-websockets-prod
