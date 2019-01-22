@@ -1,13 +1,18 @@
 language: go
 go:
-- 1.11.x
+- tip
 go_import_path: "$HOME/go/src/public/public-golang-websockets-app"
-
+before_install:
+  - go get github.com/mattn/goveralls
+  - go get github.com/tools/godep
+  - go get github.com/gorilla/websocket
+  - go get golang.org/x/tools/cmd/cover
+script:
+  - $GOPATH/bin/goveralls -service=travis-ci
 deploy:
   provider: heroku
   app: public-go-websockets-prod
   on:
-    condition: "$TRAVIS_GO_VERSION =~ ^1\\.11"
     repo: ncmd/public-golang-websockets-app
     branch: master
   api_key:

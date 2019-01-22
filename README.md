@@ -12,8 +12,8 @@
 1. Install Go version 1.11
 2. go get -u github.com/tools/godep
 3. godep save ./...
-2. cd /Users/<username>/go/src/nervdaq/ && go run *.go
-3. Open web browser and visit: http://localhost:8080/
+4. cd /Users/<username>/go/src/nervdaq/ && go run *.go
+5. Open web browser and visit: http://localhost:8080/
 
 # Travis deployment
 - Reference: <https://medium.com/@felipeluizsoares/automatically-deploy-with-travis-ci-and-heroku-ddba1361647f>
