@@ -43,9 +43,9 @@ func main() {
 			fmt.Println(variable[1])
 			if variable[1] == "local" {
 				fmt.Println("Using Local Environment")
-				homefile = "home_local.html"
+				homefile = "home_local_stock.html"
 			} else {
-				homefile = "home_prod.html"
+				homefile = "home_prod_stock.html"
 			}
 		}
 	}
