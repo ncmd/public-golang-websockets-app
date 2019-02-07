@@ -13,12 +13,17 @@ import (
 	"strings"
 )
 
-var homefile = ""
+var homefile_stock = ""
+var homefile_chat = ""
 
 func serveHome(w http.ResponseWriter, r *http.Request) {
 	log.Println(r.URL)
 	if r.URL.Path == "/" {
-		http.ServeFile(w, r, homefile)
+		http.ServeFile(w, r, homefile_stock)
+		return
+	}
+	if r.URL.Path == "/chat" {
+		http.ServeFile(w, r, homefile_chat)
 		return
 	}
 	// if r.URL.Path == "/main.js" {
@@ -43,9 +48,12 @@ func main() {
 			fmt.Println(variable[1])
 			if variable[1] == "local" {
 				fmt.Println("Using Local Environment")
-				homefile = "home_local_stock.html"
+				homefile_stock = "home_local_stock.html"
+				homefile_chat = "home_local_chat.html"
+				// Use Production
 			} else {
-				homefile = "home_prod_stock.html"
+				homefile_stock = "home_prod_stock.html"
+				homefile_chat = "home_prod_chat.html"
 			}
 		}
 	}
